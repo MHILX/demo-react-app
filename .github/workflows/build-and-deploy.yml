@@ -41,7 +41,9 @@ jobs:
     steps:
       - name: Deploy to Dev
         run: |
-          echo deploying to dev...        
+          echo deploying to dev...
+          echo 'MY_ENV_SECRET: ${{ secrets.MY_ENV_SECRET }}'
+          echo 'MY_ENV_VARIABLE: ${{ env.MY_ENV_VARIABLE }}'
 
   deploy-qa:
     name: Deploy to QA
@@ -53,7 +55,9 @@ jobs:
     steps:
       - name: Deploy to QA
         run: |
-          echo deploying to qa...     
+          echo deploying to qa...
+          echo 'MY_ENV_SECRET: ${{ secrets.MY_ENV_SECRET }}'
+          echo 'MY_ENV_VARIABLE: ${{ env.MY_ENV_VARIABLE }}'
 
   deploy-prod:
     name: Deploy to Prod
@@ -65,4 +69,6 @@ jobs:
     steps:
       - name: Deploy to QA
         run: |
-          echo deploying to qa...  
+          echo deploying to qa...
+          echo 'MY_ENV_SECRET: ${{ secrets.MY_ENV_SECRET }}'
+          echo 'MY_ENV_VARIABLE: ${{ env.MY_ENV_VARIABLE }}'
