@@ -43,7 +43,7 @@ jobs:
         run: |
           echo deploying to dev...
           echo 'MY_ENV_SECRET: ${{ secrets.MY_ENV_SECRET }}'
-          echo 'MY_ENV_VARIABLE: ${{ env.MY_ENV_VARIABLE }}'
+          echo 'MY_ENV_VARIABLE: ${{ vars.MY_ENV_VARIABLE }}'
 
   deploy-qa:
     name: Deploy to QA
